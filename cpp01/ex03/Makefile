@@ -1,17 +1,36 @@
-NAME = Weapon
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+NAME	= Weapon
+
+SRC		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+OBJ_DIR	= obj
+OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
+
+CPP		= c++
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+
+#Colors
+GREEN	= \033[0;32m
+RED		= \033[0;31m
+YELLOW	= \033[0;33m
+RESET	= \033[0m
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	@$(CPP) $(FLAGS) $(OBJ) -o $(NAME)
+	@echo "$(GREEN)✔ Compiled$(RESET)"
+
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
+	@rm -rf $(OBJ_DIR)
+	@echo "$(YELLOW)Cleaned obj files.$(RESET)"
+
+fclean: clean
 	@rm -f $(NAME)
-	@echo "Cleaned up."
+	@echo "$(RED)Cleaned all.$(RESET)"
 
-re: clean all
+re: fclean all
 
-.PHONY: all clean re
+.PHONY: all clean fclean re
