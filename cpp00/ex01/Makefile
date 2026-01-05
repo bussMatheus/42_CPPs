@@ -1,6 +1,6 @@
 NAME	= phonebook
 
-SRC		= PhoneBook.cpp main.cpp Contact.cpp
+SRC		= PhoneBook.cpp main.cpp Contact.cpp utils.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
