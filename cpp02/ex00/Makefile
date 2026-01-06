@@ -1,6 +1,6 @@
-NAME	= 
+NAME	=Orthodox_Canonical_Form
 
-SRC		= main.cpp
+SRC		= main.cpp Fixed.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
