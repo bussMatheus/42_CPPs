@@ -1,15 +1,8 @@
 #include "./Fixed.hpp"
 
-Fixed::Fixed(const int n)
+Fixed::Fixed(void) : _rawBits(0)
 {
-	std::cout << "Int constructor called" << std::endl;
-	_rawBits = n << _fractionalBits;
-}
-
-Fixed::Fixed(const float f)
-{
-	std::cout << "Float constructor called" << std::endl;
-	_rawBits = roundf(f * (1 << _fractionalBits));
+	std::cout << "Default Constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed & instance)
@@ -42,7 +35,3 @@ void	Fixed::setRawBits(int const raw)
 	this->_rawBits = raw;
 }
 
-float	Fixed::toFloat(void) const
-{
-	return _rawBits >> _fractionalBits;
-}
