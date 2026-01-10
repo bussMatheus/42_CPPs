@@ -1,5 +1,6 @@
-NAME	= Account
-SRC		= Account.cpp tests.cpp
+NAME	= ScavTrap
+
+SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
