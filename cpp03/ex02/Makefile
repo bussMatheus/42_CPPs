@@ -1,4 +1,4 @@
-NAME	= ScavTrap
+NAME	= FragTrap
 
 SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ_DIR	= obj

@@ -1,14 +1,16 @@
 #include "./ClapTrap.hpp"
-#include "./FragTrap.hpp"
+#include "./DiamondTrap.hpp"
 
 int	main(void)
 {
-	FragTrap a("Ezequiel");
+	DiamondTrap a("Lucy");
 
 	a.attack("enemy");
 	a.takeDamage(30);
 	a.beRepaired(20);
 	a.highFivesGuys();
+	a.guardGate();
+	a.whoAmI();
 
 	return 0;
 }

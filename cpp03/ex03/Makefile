@@ -1,6 +1,6 @@
-NAME	= ScavTrap
+NAME	= DiamondTrap
 
-SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

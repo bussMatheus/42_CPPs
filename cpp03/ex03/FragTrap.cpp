@@ -1,6 +1,6 @@
 #include "./FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap(void)
+FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "FragTrap constructor called" << std::endl;
 	this->_hitPts = 100;
@@ -34,7 +34,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 
-void	FlagTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap requests a high five full of positive energy" << std::endl;
+	std::cout << "FragTrap " << _name << " requests a high five full of positive energy" << std::endl;
 }
