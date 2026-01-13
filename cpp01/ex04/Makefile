@@ -21,7 +21,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
 	@rm -rf $(OBJ_DIR)

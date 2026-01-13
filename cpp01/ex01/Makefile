@@ -1,6 +1,6 @@
 NAME	= ZombieHorde
 
-SRC		= Zombie.cpp main.cpp ZombieHorde.cpp
+SRC		= Zombie.cpp main.cpp zombieHorde.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
@@ -21,7 +21,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
 	@rm -rf $(OBJ_DIR)

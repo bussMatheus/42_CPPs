@@ -1,6 +1,6 @@
-NAME	=Fixed_points
+NAME	= Polymorphism
 
-SRC		= main.cpp Fixed.cpp
+SRC		= main.cpp Animal.cpp Dog.cpp Cat.cpp
 OBJ_DIR	= obj
 OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
