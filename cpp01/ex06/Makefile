@@ -1,4 +1,4 @@
-NAME	= Harl_filter
+NAME	= HarlFilter
 
 SRC		= main.cpp Harl.cpp
 OBJ_DIR	= obj
