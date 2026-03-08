@@ -11,5 +11,9 @@ int	main(void)
 
 	b = a;
 	b.attack("another enemy");
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	a.beRepaired(1);
+	//}
 	return (0);
 }

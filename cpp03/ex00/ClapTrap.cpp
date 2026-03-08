@@ -1,10 +1,16 @@
 #include "./ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) : _name("Unamed"),
-		_hitPts(10), _energyPts(10), _attackDmg(0) {}
+		_hitPts(10), _energyPts(10), _attackDmg(0)
+{
+	std::cout << "ClapTrap Constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name),
-		_hitPts(10), _energyPts(10), _attackDmg(0) {}
+		_hitPts(10), _energyPts(10), _attackDmg(0)
+{
+	std::cout << "ClapTrap Constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
@@ -23,8 +29,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	return (*this);
 }
 
-ClapTrap::~ClapTrap(void) {}
-
+ClapTrap::~ClapTrap(void)
+{
+	std::cout << "ClapTrap destructor called" << std::endl;
+}
 
 //Methods
 void	ClapTrap::attack(const std::string &target)
